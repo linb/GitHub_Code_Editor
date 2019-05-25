@@ -8,7 +8,7 @@ xui.Class('Module.CodeMirror5', 'xui.Module',{
         Required:[
             "https://cdn.jsdelivr.net/npm/codemirror@5.47.0/lib/codemirror.min.js",
             "https://cdn.jsdelivr.net/npm/codemirror@5.47.0/mode/meta.js",
-            "https://cdn.jsdelivr.net/npm/codemirror@5.47.0/addon/mode/loadmode.js"
+            "https://cdn.jsdelivr.net/npm/codemirror@5.47.0/addon/mode/loadmode.js" 
         ],
         // To initialize properties
         properties : {},
