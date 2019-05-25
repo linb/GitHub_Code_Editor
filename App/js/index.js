@@ -1346,7 +1346,7 @@ xui.Class('App', 'xui.Module',{
                         "target":"msg",
                         "args":[
                             "Specify json name",
-                            "Name ( [a-zA-Z_] only, no \".json\" please )"
+                            "Name ( [a-zA-Z_]+\\.[a-zA-Z]+ only )"
                         ],
                         "method":"prompt",
                         "okFlag":"_prompt_ok",
@@ -1401,7 +1401,7 @@ xui.Class('App', 'xui.Module',{
                             undefined,
                             "createFile",
                             "{global.repoName}",
-                            "{args[0]}{temp.okData}.json",
+                            "{args[0]}{temp.okData}",
                             "{global.dftFileContent}",
                             "{true}",
                             "{xui.free}",
