@@ -1028,6 +1028,11 @@ xui.Class('App', 'xui.Module',{
             );
             
             append(
+                xui.create("Module.CodeMirror5", "xui.Module")
+                .setHost(host,"module_codemirror5")
+            );
+            
+            append(
                 xui.create("xui.UI.CSSBox")
                 .setHost(host,"xui_ui_cssbox1")
                 .setClassName("xui-css-can")
