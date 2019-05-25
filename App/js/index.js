@@ -81,7 +81,7 @@ xui.Class('App', 'xui.Module',{
                                 "id":"new",
                                 "caption":"New",
                                 "imageClass":"xui-uicmd-add",
-                                "tips":"Add a new json file to root"
+                                "tips":"Add a new file to root"
                             },
                             {
                                 "id":"refresh",
@@ -167,7 +167,7 @@ xui.Class('App', 'xui.Module',{
                     {
                         "id":"new",
                         "itemClass":"xuicon xui-uicmd-add",
-                        "tips":"Add new json",
+                        "tips":"Add new file",
                         "tag":"branch"
                     },
                     {
@@ -258,7 +258,7 @@ xui.Class('App', 'xui.Module',{
                             "{global.repoName}",
                             "{args[1].id}",
                             "",
-                            "json",
+                            "",
                             undefined,
                             ""
                         ],
@@ -284,7 +284,7 @@ xui.Class('App', 'xui.Module',{
                         {
                             "desc":"exists?",
                             "type":"control",
-                            "target":"xui_tabs_json",
+                            "target":"xui_tabs_code",
                             "args":[
                                 "{args[1].id}",
                                 "{args[1].id}"
@@ -292,7 +292,7 @@ xui.Class('App', 'xui.Module',{
                             "method":"setValue",
                             "conditions":[
                                 {
-                                    "left":"{page.xui_tabs_json.getItems()}",
+                                    "left":"{page.xui_tabs_code.getItems()}",
                                     "symbol":"objarrhaskey",
                                     "right":"{args[1].id}"
                                 }
@@ -325,7 +325,7 @@ xui.Class('App', 'xui.Module',{
                         {
                             "desc":"add tab",
                             "type":"control",
-                            "target":"xui_tabs_json",
+                            "target":"xui_tabs_code",
                             "args":[
                                 "{temp.item}",
                                 true,
@@ -337,7 +337,7 @@ xui.Class('App', 'xui.Module',{
                         {
                             "desc":"active tab",
                             "type":"control",
-                            "target":"xui_tabs_json",
+                            "target":"xui_tabs_code",
                             "args":[
                                 "{args[1].id}"
                             ],
@@ -361,7 +361,7 @@ xui.Class('App', 'xui.Module',{
                             "target":"{temp.newbies.clfjj5fi}",
                             "args":[
                                 undefined,
-                                "{page.xui_tabs_json}",
+                                "{page.xui_tabs_code}",
                                 "{args[1].id}"
                             ],
                             "method":"show"
@@ -378,7 +378,7 @@ xui.Class('App', 'xui.Module',{
                                 "{global.repoName}",
                                 "{args[1].id}",
                                 "{true}",
-                                "{temp.newbies.clfjj5fi.functions.setjson}"
+                                "{temp.newbies.clfjj5fi.functions.setcode}"
                             ],
                             "method":"$Functions.readFile",
                             "redirection":"other:callback:call"
@@ -389,7 +389,7 @@ xui.Class('App', 'xui.Module',{
             
             host.xui_ui_layout3.append(
                 xui.create("xui.UI.Tabs")
-                .setHost(host,"xui_tabs_json")
+                .setHost(host,"xui_tabs_code")
                 .setLeft("0em")
                 .setTop("0em")
                 .setValue("a"),
@@ -494,7 +494,7 @@ xui.Class('App', 'xui.Module',{
                 .setDock("center")
                 .setTop("0.6666666666666666em")
                 .setHeight("2.6666666666666665em")
-                .setCaption("<svg class=\"octicon octicon-mark-github v-align-middle\" height=\"28\" viewBox=\"0 0 16 16\" version=\"1.1\" width=\"28\" aria-hidden=\"true\"><path fill-rule=\"evenodd\" d=\"M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z\"></path></svg>   GitHub JSON Editor")
+                .setCaption("<svg class=\"octicon octicon-mark-github v-align-middle\" height=\"28\" viewBox=\"0 0 16 16\" version=\"1.1\" width=\"28\" aria-hidden=\"true\"><path fill-rule=\"evenodd\" d=\"M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z\"></path></svg>   GitHub Code Editor")
                 .setHAlign("left")
                 .setFontSize("2em")
                 .setFontFamily("comic sans ms,cursive")
@@ -587,7 +587,7 @@ xui.Class('App', 'xui.Module',{
                     {
                         "desc":"clr tabs",
                         "type":"control",
-                        "target":"xui_tabs_json",
+                        "target":"xui_tabs_code",
                         "args":[ ],
                         "method":"clearItems"
                     },
@@ -911,7 +911,7 @@ xui.Class('App', 'xui.Module',{
                         {
                             "desc":"update tab",
                             "type":"control",
-                            "target":"xui_tabs_json",
+                            "target":"xui_tabs_code",
                             "args":[
                                 "{args[1]}",
                                 "{temp.updateItem}"
@@ -1017,7 +1017,7 @@ xui.Class('App', 'xui.Module',{
                         {
                             "desc":"remove from tabs",
                             "type":"control",
-                            "target":"xui_tabs_json",
+                            "target":"xui_tabs_code",
                             "args":[
                                 "{args[1]}"
                             ],
@@ -1145,7 +1145,7 @@ xui.Class('App', 'xui.Module',{
             "ur_path":null,
             "per_page":null,
             "cur_page":null,
-            "json_path":null
+            "file_path":null
         },
         functions:{
             "popRepoSearchWnd":{
@@ -1300,7 +1300,7 @@ xui.Class('App', 'xui.Module',{
                             "{global.repoName}",
                             undefined,
                             "all",
-                            "json"
+                            ""
                         ],
                         "method":"$Functions.listFiles",
                         "redirection":"other:callback:call"
@@ -1323,7 +1323,7 @@ xui.Class('App', 'xui.Module',{
                             "{global.repoName}",
                             undefined,
                             "all",
-                            "json"
+                            ""
                         ],
                         "method":"$Functions.listFiles",
                         "redirection":"other:callback:call"
@@ -1331,7 +1331,7 @@ xui.Class('App', 'xui.Module',{
                 ]
             },
             "createFile":{
-                "desc":"create json",
+                "desc":"create file",
                 "params":[
                     {
                         "id":"dir",
@@ -1345,7 +1345,7 @@ xui.Class('App', 'xui.Module',{
                         "type":"other",
                         "target":"msg",
                         "args":[
-                            "Specify json name",
+                            "Specify file name",
                             "Name ( [a-zA-Z_]+\\.[a-zA-Z]+ only )"
                         ],
                         "method":"prompt",
