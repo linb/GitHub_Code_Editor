@@ -3,8 +3,13 @@
 // Sub module don't support Dependencies, and those async functions
 xui.Class('Module.CodeMirror5', 'xui.Module',{
     Instance:{
+        Dependencies:["https://cdn.jsdelivr.net/npm/codemirror@5.47.0/lib/codemirror.css"],
         // Required modules
-        Required:[],
+        Required:[
+            "https://cdn.jsdelivr.net/npm/codemirror@5.47.0/lib/codemirror.min.js",
+            "https://cdn.jsdelivr.net/npm/codemirror@5.47.0/mode/meta.js",
+            "https://cdn.jsdelivr.net/npm/codemirror@5.47.0/addon/mode/loadmode.js"
+        ],
         // To initialize properties
         properties : {},
 
