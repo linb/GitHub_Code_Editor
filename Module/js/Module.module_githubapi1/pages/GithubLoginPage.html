@@ -1,0 +1,24 @@
+<!doctype html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="theme-color" content="#000000">
+    <title>CrossUI Github Login</title>
+    <script type="text/javascript">
+        !(function(){
+            var qs=location.hash.replace('#','') ;
+            if(qs && /^access_token=[\w]{40,}/.test(qs) ){
+                window.opener.githubTokenResponse(qs);
+                window.close();
+            }else{
+                // *** Replace it with your own backend please
+                // *** Must return {callbackUrl}#!access_token=xxxxxxxxxxxxxxxxx
+                // *** Modify it to your service address
+                var service = 'https://www.crossui.com/github/login_demo.php', callbackUrl = location.href.split('?')[0];
+                window.location = service + '?callback_url='+callbackUrl;
+            }
+        })();
+    </script>
+</head>
+<body></body>
+</html>
