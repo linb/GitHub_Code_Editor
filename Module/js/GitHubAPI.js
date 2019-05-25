@@ -32,7 +32,7 @@ xui.Class('Module.GitHubAPI', 'xui.Module',{
                     .setShowEffects("Slide In TB")
                     .setHideEffects("Slide In TB")
                     .setPanelBgClr("#fff")
-                    .setIframeAutoLoad("{/}Module/js/Module.GithubAPI/pages/GithubLoginLayer.html");
+                    .setIframeAutoLoad("{/}Module/js/Module.GitHubAPI/pages/GithubLoginLayer.html");
                 // ensure effects
                 loginLayer.render(true);
             }
