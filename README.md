@@ -20,7 +20,14 @@ This project was created by codeless programming Builder: https://crossui.com/RA
 
 ![Snapshot](https://raw.githubusercontent.com/linb/GitHub_Code_Editor/master/snapshot.png)
 
-> Dependencies: [@octokit/rest.js](https://github.com/octokit/rest.js)  [@codemirror/CodeMirror](https://github.com/codemirror/CodeMirror) 
-<hr/>
+> Dependencies: [@octokit/rest.js](https://github.com/octokit/rest.js) and  [@codemirror/CodeMirror](https://github.com/codemirror/CodeMirror) 
+* Support for over 100 languages out of the box
+* Code folding
+* Search and replace interface
+* Bracket and tag matching
+* Linter integration
+* Mixing font sizes and styles
+* Various themes
+* More...
 
 > <i style="text-align:right;">Powered by [CrossUI](https://crossui.com)</i>
