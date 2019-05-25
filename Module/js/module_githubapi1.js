@@ -1,5 +1,5 @@
 // It's a module witohout UI elements
-xui.Class('Module.module_githubapi1', 'xui.Module',{
+xui.Class('Module.Module_Githubapi1', 'xui.Module',{
     Instance:{
         // Dependency libs
         Required:[
