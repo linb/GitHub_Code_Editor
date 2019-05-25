@@ -39,13 +39,13 @@ xui.Class('Module.Editor', 'xui.Module',{
                     "newbies":{ },
                     "actions":[
                         {
-                            "desc":"get json",
+                            "desc":"get file",
                             "type":"control",
                             "target":"xui_ui_textarea",
                             "args":[
                                 "{page.xui_ui_textarea.getUIValue()}",
                                 "temp",
-                                "json"
+                                "code"
                             ],
                             "method":"getUIValue",
                             "redirection":"other:callback:call",
@@ -62,7 +62,7 @@ xui.Class('Module.Editor', 'xui.Module',{
                                 "saveFile",
                                 "{page.properties.path}",
                                 "{page.properties.sha}",
-                                "{temp.json}"
+                                "{temp.code}"
                             ],
                             "method":"gbroadcast",
                             "redirection":"other:callback:call"
@@ -99,9 +99,9 @@ xui.Class('Module.Editor', 'xui.Module',{
                     {
                         "desc":"sync editor",
                         "type":"module",
-                        "target":"xui_module_jsoneditor4",
+                        "target":"xui_module_code_editor",
                         "args":[
-                            "{page.xui_module_jsoneditor4.setValue}",
+                            "{page.xui_module_code_editor.setValue}",
                             undefined,
                             undefined,
                             "{args[2]}"
@@ -178,7 +178,7 @@ xui.Class('Module.Editor', 'xui.Module',{
         propSetAction : function(prop){
         },
         functions:{
-            "setjson":{
+            "setcode":{
                 "desc":"",
                 "params":[
                     {
@@ -187,7 +187,7 @@ xui.Class('Module.Editor', 'xui.Module',{
                         "desc":""
                     },
                     {
-                        "id":"json",
+                        "id":"code",
                         "type":"String",
                         "desc":""
                     }
@@ -198,31 +198,31 @@ xui.Class('Module.Editor', 'xui.Module',{
                         "type":"other",
                         "target":"var",
                         "args":[
-                            "json",
+                            "code",
                             "{args[1]}"
                         ],
                         "method":"temp",
                         "adjust":"{xui.Coder.formatText}"
                     },
                     {
-                        "desc":"set json to txt",
+                        "desc":"set code to txt",
                         "type":"control",
                         "target":"xui_ui_textarea",
                         "args":[
                             "{page.xui_ui_textarea.setUIValue()}",
                             undefined,
                             undefined,
-                            "{temp.json}"
+                            "{temp.code}"
                         ],
                         "method":"setUIValue",
                         "redirection":"other:callback:call"
                     },
                     {
-                        "desc":"set json to eidtor",
+                        "desc":"set code to eidtor",
                         "type":"module",
-                        "target":"xui_module_jsoneditor4",
+                        "target":"xui_module_code_editor",
                         "args":[
-                            "{page.xui_module_jsoneditor4.setValue}",
+                            "{page.xui_module_code_editor.setValue}",
                             undefined,
                             undefined,
                             "{args[1]}"
