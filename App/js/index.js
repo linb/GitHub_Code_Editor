@@ -755,7 +755,7 @@ xui.Class('App', 'xui.Module',{
             );
             
             append(
-                xui.create("Module.GitHubAPI1", "xui.Module")
+                xui.create("Module.GitHubAPI", "xui.Module")
                 .setHost(host,"module_githubapi1")
                 .setEvents({
                     "onGithubLogin":[
