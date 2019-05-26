@@ -120,6 +120,11 @@ xui.Class('Module.Editor', 'xui.Module',{
             );
             
             append(
+                xui.create("Module.CodeMirror5", "xui.Module")
+                .setHost(host,"module_codemirror51")
+            );
+            
+            append(
                 xui.create("xui.UI.CSSBox")
                 .setHost(host,"xui_ui_cssbox8")
                 .setClassName("xui-css-csj")
@@ -194,17 +199,6 @@ xui.Class('Module.Editor', 'xui.Module',{
                 ],
                 "actions":[
                     {
-                        "desc":"fomat",
-                        "type":"other",
-                        "target":"var",
-                        "args":[
-                            "code",
-                            "{args[1]}"
-                        ],
-                        "method":"temp",
-                        "adjust":"{xui.Coder.formatText}"
-                    },
-                    {
                         "desc":"set code to txt",
                         "type":"control",
                         "target":"xui_ui_textarea",
@@ -212,22 +206,9 @@ xui.Class('Module.Editor', 'xui.Module',{
                             "{page.xui_ui_textarea.setUIValue()}",
                             undefined,
                             undefined,
-                            "{temp.code}"
-                        ],
-                        "method":"setUIValue",
-                        "redirection":"other:callback:call"
-                    },
-                    {
-                        "desc":"set code to eidtor",
-                        "type":"module",
-                        "target":"xui_module_code_editor",
-                        "args":[
-                            "{page.xui_module_code_editor.setValue}",
-                            undefined,
-                            undefined,
                             "{args[1]}"
                         ],
-                        "method":"$Functions.setValue",
+                        "method":"setUIValue",
                         "redirection":"other:callback:call"
                     },
                     {
@@ -236,6 +217,20 @@ xui.Class('Module.Editor', 'xui.Module',{
                         "target":"xui_ui_block19",
                         "args":[ ],
                         "method":"free"
+                    },
+                    {
+                        "desc":"apply codemirror",
+                        "type":"module",
+                        "target":"module_codemirror51",
+                        "args":[
+                            "{page.module_codemirror51.attachCodeMirror}",
+                            undefined,
+                            undefined,
+                            "{page.xui_ui_textarea}",
+                            "{args[0]}"
+                        ],
+                        "method":"$Functions.attachCodeMirror",
+                        "redirection":"other:callback:call"
                     }
                 ]
             },
