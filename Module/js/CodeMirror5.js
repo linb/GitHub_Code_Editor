@@ -50,8 +50,9 @@ xui.Class('Module.CodeMirror5', 'xui.Module',{
         $EventHandlers:{
         },
         $Functions:{
-            attachCodeMirror:function( inputCtrl/*xui.UI.Input, the input control*/, 
-                                      path/*String, file path*/
+            attachCodeMirror:function( div/*xui.UI.Div, the Container*/, 
+                                    path/*String, file path*/,
+                                    value/*String, the code*/
             ){}
         }
     }
