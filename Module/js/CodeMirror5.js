@@ -8,7 +8,30 @@ xui.Class('Module.CodeMirror5', 'xui.Module',{
         Required:[
             "https://cdn.jsdelivr.net/npm/codemirror@5.47.0/lib/codemirror.min.js",[
                 "https://cdn.jsdelivr.net/npm/codemirror@5.47.0/mode/meta.js",
-                "https://cdn.jsdelivr.net/npm/codemirror@5.47.0/addon/mode/loadmode.js" 
+                "https://cdn.jsdelivr.net/npm/codemirror@5.47.0/addon/mode/loadmode.js",
+                "https://cdn.jsdelivr.net/npm/codemirror@5.47.0/keymap/sublime.js",
+                "https://cdn.jsdelivr.net/npm/codemirror@5.47.0/addon/lint/jshint.js",
+                "https://cdn.jsdelivr.net/npm/codemirror@5.47.0/addon/lint/jsonlint.js",
+                "https://cdn.jsdelivr.net/npm/codemirror@5.47.0/addon/lint/csslint.js",
+                "https://cdn.jsdelivr.net/npm/codemirror@5.47.0/addon/lint/htmlhint.js",
+                "https://cdn.jsdelivr.net/npm/codemirror@5.47.0/addon/lint/lint.js",
+                "https://cdn.jsdelivr.net/npm/codemirror@5.47.0/addon/lint/javascript-lint.js",
+                "https://cdn.jsdelivr.net/npm/codemirror@5.47.0/addon/lint/json-lint.js",
+                "https://cdn.jsdelivr.net/npm/codemirror@5.47.0/addon/lint/css-lint.js",
+                "https://cdn.jsdelivr.net/npm/codemirror@5.47.0/addon/lint/html-lint.js",
+                "https://cdn.jsdelivr.net/npm/codemirror@5.47.0/addon/fold/foldcode.js",
+                "https://cdn.jsdelivr.net/npm/codemirror@5.47.0/addon/fold/foldgutter.js",
+                "https://cdn.jsdelivr.net/npm/codemirror@5.47.0/addon/fold/brace-fold.js",
+                "https://cdn.jsdelivr.net/npm/codemirror@5.47.0/addon/fold/xml-fold.js",
+                "https://cdn.jsdelivr.net/npm/codemirror@5.47.0/addon/fold/comment-fold.js",
+                "https://cdn.jsdelivr.net/npm/codemirror@5.47.0/addon/selection/active-line.js",
+                "https://cdn.jsdelivr.net/npm/codemirror@5.47.0/addon/search/searchcursor.js",
+                "https://cdn.jsdelivr.net/npm/codemirror@5.47.0/addon/search/match-highlighter.js",
+                "https://cdn.jsdelivr.net/npm/codemirror@5.47.0/addon/edit/matchbrackets.js",
+                "https://cdn.jsdelivr.net/npm/codemirror@5.47.0/addon/edit/closebrackets.js",
+                "https://cdn.jsdelivr.net/npm/codemirror@5.47.0/addon/comment/comment.js",
+                "https://cdn.jsdelivr.net/npm/codemirror@5.47.0/addon/comment/continuecomment.js"
+                
             ]
         ],
         // To initialize properties
@@ -41,11 +64,12 @@ xui.Class('Module.CodeMirror5', 'xui.Module',{
                 indentUnit:4,
                 tabSize:4,
                 indentWithTabs:false,
+                keyMap: "sublime",
                 matchBrackets: true,
                 continueComments: "Enter",
                 autoCloseBrackets:true,
                 lineNumbers:true,
-                // lint:(ext=='js'||ext=='json'||ext=='css'||ext=='html')?true:false,
+                lint:(ext=='js'||ext=='json'||ext=='css'||ext=='html')?true:false,
                 styleActiveLine: true,
                 lineWrapping: false,
                 flattenSpans:false,
