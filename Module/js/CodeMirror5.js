@@ -86,6 +86,8 @@ xui.Class('Module.CodeMirror5', 'xui.Module',{
         propSetAction : function(prop){
         },
         attachCodeMirror : function(div, path, initValue){
+            var module = this;
+            
             if(div.get(0).$cm)return;
    
             var ext = path.split(".").pop(),
@@ -111,9 +113,7 @@ xui.Class('Module.CodeMirror5', 'xui.Module',{
                 gutters: ["CodeMirror-lint-markers","CodeMirror-linenumbers", "CodeMirror-foldgutter"],                
                 extraKeys: {"Ctrl-Q": function(cm){ cm.foldCode(cm.getCursor()); }}
             };
-            
-console.log(options); 
-            
+ 
             var cm = new CodeMirror(function(elt){
                 div.getRoot().append(elt);
             }, options);
@@ -125,9 +125,8 @@ console.log(options);
             cm.setSize(div.getRoot().width(),  div.getRoot().height());
             
             div.get(0).$cm = cm;
-            
             cm.on("change",function(cm,obj){
-                
+                module.fireEvent("onChange", [cm.getDoc().getValue()]);
             });
         }
     },
@@ -136,6 +135,7 @@ console.log(options);
         $DataModel:{
         },
         $EventHandlers:{
+            onChange:function(code /*String, new code */){}
         },
         $Functions:{
             attachCodeMirror:function( div /*xui.UI.Div, the Container*/, 
