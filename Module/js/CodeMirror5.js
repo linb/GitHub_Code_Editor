@@ -15,7 +15,7 @@ xui.Class('Module.CodeMirror5', 'xui.Module',{
         // Required modules
         Required:[
             "https://cdn.jsdelivr.net/npm/htmlhint@latest/dist/htmlhint.js",
-            "https://cdn.jsdelivr.net/npm/jshint@2.10.1/dist/jshint.js",
+            "https://cdn.jsdelivr.net/npm/jshint@2.9.6/dist/jshint.js",
             "https://cdn.jsdelivr.net/npm/csslint@1.0.5/dist/csslint.js",
             "https://cdn.jsdelivr.net/npm/jsonlint@1.6.3/lib/jsonlint.min.js",
             
