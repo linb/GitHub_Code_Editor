@@ -174,7 +174,7 @@ xui.Class('Module.Editor', 'xui.Module',{
                             undefined,
                             undefined,
                             "{page.xui_ui_cm}",
-                            "{args[0]}",
+                            "{page.properties.path}",
                             "{args[1]}"
                         ],
                         "method":"$Functions.attachCodeMirror",
