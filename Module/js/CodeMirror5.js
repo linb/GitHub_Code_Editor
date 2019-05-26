@@ -159,7 +159,8 @@ xui.Class('Module.CodeMirror5', 'xui.Module',{
             attachCodeMirror:function( div /*xui.UI.Div, the Container*/, 
                                     path /*String, file path, with file ext*/,
                                     initValue /*String, the code*/
-            ){}
+            ){},
+            reindent:function(){}
         }
     }
 });
