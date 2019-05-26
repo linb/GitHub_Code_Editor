@@ -3,16 +3,16 @@
 // Sub module don't support Dependencies, and those async functions
 xui.Class('Module.CodeMirror5', 'xui.Module',{
     Instance:{
-        Dependencies:["https://cdn.jsdelivr.net/npm/codemirror@5.47.0/lib/codemirror.css"],
+        Dependencies:[
+            "https://cdn.jsdelivr.net/npm/codemirror@5.47.0/lib/codemirror.css",
+            "https://cdn.jsdelivr.net/npm/codemirror@5.47.0/addon/lint/lint.css"
+        ],
         // Required modules
         Required:[
             "https://cdn.jsdelivr.net/npm/codemirror@5.47.0/lib/codemirror.min.js",[
                 "https://cdn.jsdelivr.net/npm/codemirror@5.47.0/mode/meta.js",
                 "https://cdn.jsdelivr.net/npm/codemirror@5.47.0/addon/mode/loadmode.js",
                 "https://cdn.jsdelivr.net/npm/codemirror@5.47.0/keymap/sublime.js",
-                "https://cdn.jsdelivr.net/npm/codemirror@5.47.0/addon/lint/jsonlint.js",
-                "https://cdn.jsdelivr.net/npm/codemirror@5.47.0/addon/lint/csslint.js",
-                "https://cdn.jsdelivr.net/npm/codemirror@5.47.0/addon/lint/htmlhint.js",
                 "https://cdn.jsdelivr.net/npm/codemirror@5.47.0/addon/lint/lint.js",
                 "https://cdn.jsdelivr.net/npm/codemirror@5.47.0/addon/lint/javascript-lint.js",
                 "https://cdn.jsdelivr.net/npm/codemirror@5.47.0/addon/lint/json-lint.js",
