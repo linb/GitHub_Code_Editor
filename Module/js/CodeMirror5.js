@@ -75,6 +75,10 @@ xui.Class('Module.CodeMirror5', 'xui.Module',{
                 mode:mode.mode
             });
             CodeMirror.autoLoadMode(cm, mode.mode);
+
+            div.getRoot().onsize(function(node){
+                if(cm && cm.setSize)cm.setSize(node.cssSize());
+            },"cm");
         }
     },
     // export
