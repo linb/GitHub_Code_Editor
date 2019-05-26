@@ -79,7 +79,7 @@ xui.Class('Module.CodeMirror5', 'xui.Module',{
             CodeMirror.autoLoadMode(cm, mode.mode);
 
             div.getRoot().onSize(function(node){
-                if(cm && cm.setSize)cm.setSize(xui(node).cssSize());
+                if(cm && cm.setSize)cm.setSize(xui(node).width(), xui(node).height());
             },"cm");
             
             div.get(0).$cm = cm;
