@@ -79,11 +79,8 @@ xui.Class('Module.CodeMirror5', 'xui.Module',{
             if(div.get(0).$cm)return;
    
             var ext = path.split(".").pop(),
-                mode = CodeMirror.findModeByExtension(ext) ||  CodeMirror.findModeByExtension("txt");
-            
-            var cm = new CodeMirror(function(elt){
-                div.getRoot().append(elt);
-            }, {
+                mode = CodeMirror.findModeByExtension(ext) ||  CodeMirror.findModeByExtension("txt"),
+                options = {
                 value: initValue || "",
                 smartIndent:true,
                 indentUnit:4,
@@ -102,7 +99,12 @@ xui.Class('Module.CodeMirror5', 'xui.Module',{
                 highlightSelectionMatches: {showToken: /^[$\w]\w*/},
                 gutters: ["CodeMirror-lint-markers","CodeMirror-linenumbers", "CodeMirror-foldgutter"],                
                 mode:mode.mine || mode.mode
-            });
+            };
+console.log(options);
+            
+            var cm = new CodeMirror(function(elt){
+                div.getRoot().append(elt);
+            }, options);
             CodeMirror.autoLoadMode(cm, mode.mode);
 
             div.getRoot().onSize(function(node){
