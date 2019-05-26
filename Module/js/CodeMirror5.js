@@ -6,7 +6,9 @@ xui.Class('Module.CodeMirror5', 'xui.Module',{
         Dependencies:[
             "https://cdn.jsdelivr.net/npm/codemirror@5.47.0/lib/codemirror.css",
             "https://cdn.jsdelivr.net/npm/codemirror@5.47.0/addon/hint/show-hint.css",
-            "https://cdn.jsdelivr.net/npm/codemirror@5.47.0/addon/lint/lint.css"
+            "https://cdn.jsdelivr.net/npm/codemirror@5.47.0/addon/lint/lint.css",
+            "https://cdn.jsdelivr.net/npm/codemirror@5.47.0/addon/dialog/dialog.css">
+            "https://cdn.jsdelivr.net/npm/codemirror@5.47.0/addon/search/matchesonscrollbar.css">            
         ],
         // Required modules
         Required:[
@@ -14,6 +16,7 @@ xui.Class('Module.CodeMirror5', 'xui.Module',{
             "https://cdn.jsdelivr.net/npm/jshint@2.10.1/dist/jshint.js",
             "https://cdn.jsdelivr.net/npm/csslint@1.0.5/dist/csslint.js",
             "https://cdn.jsdelivr.net/npm/jsonlint@1.6.3/lib/jsonlint.min.js",
+            
             "https://cdn.jsdelivr.net/npm/codemirror@5.47.0/lib/codemirror.min.js",[
                 "https://cdn.jsdelivr.net/npm/codemirror@5.47.0/mode/meta.js",
                 "https://cdn.jsdelivr.net/npm/codemirror@5.47.0/addon/mode/loadmode.js",
@@ -41,7 +44,14 @@ xui.Class('Module.CodeMirror5', 'xui.Module',{
                 "https://cdn.jsdelivr.net/npm/codemirror@5.47.0/addon/edit/matchbrackets.js",
                 "https://cdn.jsdelivr.net/npm/codemirror@5.47.0/addon/edit/closebrackets.js",
                 "https://cdn.jsdelivr.net/npm/codemirror@5.47.0/addon/comment/comment.js",
-                "https://cdn.jsdelivr.net/npm/codemirror@5.47.0/addon/comment/continuecomment.js"
+                "https://cdn.jsdelivr.net/npm/codemirror@5.47.0/addon/comment/continuecomment.js",
+                "https://cdn.jsdelivr.net/npm/codemirror@5.47.0/addon/dialog/dialog.js",
+                "https://cdn.jsdelivr.net/npm/codemirror@5.47.0/addon/search/searchcursor.js",
+                "https://cdn.jsdelivr.net/npm/codemirror@5.47.0/addon/search/search.js",
+                "https://cdn.jsdelivr.net/npm/codemirror@5.47.0/addon/scroll/annotatescrollbar.js",
+                "https://cdn.jsdelivr.net/npm/codemirror@5.47.0/addon/search/matchesonscrollbar.js",
+                "https://cdn.jsdelivr.net/npm/codemirror@5.47.0/addon/search/jump-to-line.js"
+<style>            
             ]
         ],
         // To initialize properties
