@@ -186,20 +186,6 @@ xui.Class('Module.Editor', 'xui.Module',{
                         "target":"xui_ui_block19",
                         "args":[ ],
                         "method":"free"
-                    },
-                    {
-                        "desc":"apply codemirror",
-                        "type":"module",
-                        "target":"module_codemirror51",
-                        "args":[
-                            "{page.module_codemirror51.attachCodeMirror}",
-                            undefined,
-                            undefined,
-                            "{page.xui_ui_cm}",
-                            "{args[0]}"
-                        ],
-                        "method":"$Functions.attachCodeMirror",
-                        "redirection":"other:callback:call"
                     }
                 ]
             },
