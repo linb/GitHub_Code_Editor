@@ -83,7 +83,9 @@ xui.Class('Module.Editor', 'xui.Module',{
                             "{xui.broadcast()}",
                             undefined,
                             undefined,
-                            "savecode",
+                            "saveFile",
+                            "{page.properties.path}",
+                            "{page.properties.sha}",
                             "{page.properties.code}"
                         ],
                         "method":"gbroadcast",
