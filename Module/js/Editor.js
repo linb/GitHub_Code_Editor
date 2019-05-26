@@ -84,8 +84,8 @@ xui.Class('Module.Editor', 'xui.Module',{
                 .setHost(host,"xui_ui_textarea")
                 .setDirtyMark(false)
                 .setDock("fill")
-                .setLeft("1.6666666666666667em")
-                .setTop("5em")
+                .setLeft("0em")
+                .setTop("0em")
                 .setHeight("10em")
                 .setMultiLines(true)
                 .onChange([
