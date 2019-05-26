@@ -30,16 +30,14 @@ xui.Class('Module.CodeMirror5', 'xui.Module',{
         // To determine how properties affects this module
         propSetAction : function(prop){
         },
-        attachCodeMirror : function(inputCtrl, path){
+        attachCodeMirror : function(div, path, value){
             var textarea = inputCtrl.getSubNode("INPUT").get(0),
                 ext = path.split(".").pop(),
                 mode = CodeMirror.findModeByExtension(ext) ||  CodeMirror.findModeByExtension("txt");
             var cm = new CodeMirror(function(elt){
-                profile.getSubNode('BOX').append(elt);
-                
-                if(editorFontSize)
-                    elt.style.fontSize=editorFontSize+"px";
+                div.getRoot().append(elt);
             }, {
+                value: value,
                 mode:mode.mode
             });
             // CodeMirror.autoLoadMode(cm, mode.mode);
