@@ -81,6 +81,7 @@ xui.Class('Module.CodeMirror5', 'xui.Module',{
             var ext = path.split(".").pop(),
                 mode = CodeMirror.findModeByExtension(ext) ||  CodeMirror.findModeByExtension("txt"),
                 options = {
+                mode:mode.mine || mode.mode,
                 value: initValue || "",
                 smartIndent:true,
                 indentUnit:4,
@@ -98,7 +99,7 @@ xui.Class('Module.CodeMirror5', 'xui.Module',{
                 foldGutter:true,
                 highlightSelectionMatches: {showToken: /^[$\w]\w*/},
                 gutters: ["CodeMirror-lint-markers","CodeMirror-linenumbers", "CodeMirror-foldgutter"],                
-                mode:mode.mine || mode.mode
+                extraKeys: {"Ctrl-Q": function(cm){ cm.foldCode(cm.getCursor()); }}
             };
             
 console.log(options);
