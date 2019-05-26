@@ -52,6 +52,8 @@ xui.Class('Module.CodeMirror5', 'xui.Module',{
         propSetAction : function(prop){
         },
         attachCodeMirror : function(div, path, value){
+            if(div.get(0).$cm)return;
+            
             var ext = path.split(".").pop(),
                 mode = CodeMirror.findModeByExtension(ext) ||  CodeMirror.findModeByExtension("txt");
             var cm = new CodeMirror(function(elt){
@@ -79,6 +81,8 @@ xui.Class('Module.CodeMirror5', 'xui.Module',{
             div.getRoot().onsize(function(node){
                 if(cm && cm.setSize)cm.setSize(node.cssSize());
             },"cm");
+            
+            div.get(0).$cm = cm;
         }
     },
     // export
