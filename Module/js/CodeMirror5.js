@@ -45,7 +45,7 @@ xui.Class('Module.CodeMirror5', 'xui.Module',{
                 continueComments: "Enter",
                 autoCloseBrackets:true,
                 lineNumbers:true,
-                lint:(ext=='js'||ext=='json'||ext=='css'||ext=='html')?true:false,
+                // lint:(ext=='js'||ext=='json'||ext=='css'||ext=='html')?true:false,
                 styleActiveLine: true,
                 lineWrapping: false,
                 flattenSpans:false,
