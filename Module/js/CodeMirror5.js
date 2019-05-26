@@ -35,7 +35,7 @@ xui.Class('Module.CodeMirror5', 'xui.Module',{
                 ext = path.split(".").pop(),
                 mode = CodeMirror.findModeByExtension(ext) ||  CodeMirror.findModeByExtension("txt");
             CodeMirror.fromTextArea(textarea,{
-               mode: mode.mode
+               mode: mode.mode 
             });
         }
     },
