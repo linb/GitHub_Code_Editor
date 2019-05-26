@@ -77,16 +77,9 @@ xui.Class('Module.Editor', 'xui.Module',{
                     ]
                 })
             );
+ 
             
-            append(
-                xui.create("xui.UI.Div")
-                .setHost(host,"xui_ui_div36")
-                .setDock("fill")
-                .setLeft("30em")
-                .setTop("5em")
-            );
-            
-            host.xui_ui_div36.append(
+             append(
                 xui.create("xui.UI.Input")
                 .setHost(host,"xui_ui_textarea")
                 .setDirtyMark(false)
