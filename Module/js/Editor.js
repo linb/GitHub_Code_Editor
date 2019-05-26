@@ -106,7 +106,31 @@ xui.Class('Module.Editor', 'xui.Module',{
                             "code",
                             "{undefined}"
                         ],
-                        "method":"page.properties"
+                        "method":"page.properties",
+                        "conditions":[
+                            {
+                                "left":"{args[1].id}",
+                                "symbol":"=",
+                                "right":"save"
+                            }
+                        ]
+                    },
+                    {
+                        "desc":"reindent",
+                        "type":"module",
+                        "target":"module_codemirror51",
+                        "args":[
+                            "{page.module_codemirror51.reindent}"
+                        ],
+                        "method":"$Functions.reindent",
+                        "conditions":[
+                            {
+                                "left":"{args[1].id}",
+                                "symbol":"=",
+                                "right":"reindent"
+                            }
+                        ],
+                        "redirection":"other:callback:call"
                     }
                 ])
             );
