@@ -88,7 +88,7 @@ xui.Class('Module.CodeMirror5', 'xui.Module',{
         attachCodeMirror : function(div, path, initValue){
             var module = this;
             
-            if(div.get(0).$cm)return;
+            if(module.$cm)return;
    
             var ext = path.split(".").pop(),
                 mode = CodeMirror.findModeByExtension(ext) ||  CodeMirror.findModeByExtension("txt"),
@@ -124,10 +124,28 @@ xui.Class('Module.CodeMirror5', 'xui.Module',{
             },"cm");
             cm.setSize(div.getRoot().width(),  div.getRoot().height());
             
-            div.get(0).$cm = cm;
             cm.on("change",function(cm,obj){
-                module.fireEvent("onChange", [cm.getDoc().getValue()]);
+                module.fireEvent("onChange", [cm.doc.getValue()]);
             });
+
+            module.$cm = div.get(0).$cm = cm;
+        },
+        reindent : function(){
+            if(module.$cm){
+                var cm = module.$cm,
+                    doc = cm.doc;
+                if(doc.somethingSelected()){
+                    var p1 = doc.getCursor("start"),
+                        p2 = doc.getCursor("end");
+                    for(var i=p1.line, l=p2.line; i<=l; i++)
+                        cm.indentLine(i);
+                }else{
+                    var p1l = doc.firstLine(),
+                        p2l = doc.lastLine();
+                    for(var m = p1l, n = p2l; m <= n; m++)
+                        cm.indentLine(m);
+                }
+            }
         }
     },
     // export
