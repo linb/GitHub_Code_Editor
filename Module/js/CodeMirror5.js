@@ -30,7 +30,6 @@ xui.Class('Module.CodeMirror5', 'xui.Module',{
                 "https://cdn.jsdelivr.net/npm/codemirror@5.47.0/addon/edit/closebrackets.js",
                 "https://cdn.jsdelivr.net/npm/codemirror@5.47.0/addon/comment/comment.js",
                 "https://cdn.jsdelivr.net/npm/codemirror@5.47.0/addon/comment/continuecomment.js"
-                
             ]
         ],
         // To initialize properties
