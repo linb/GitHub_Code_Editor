@@ -41,9 +41,7 @@ xui.Class('Module.CodeMirror5', 'xui.Module',{
                 indentUnit:4,
                 tabSize:4,
                 indentWithTabs:false,
-
                 keyMap: "sublime",
-                
                 matchBrackets: true,
                 continueComments: "Enter",
                 autoCloseBrackets:true,
@@ -52,11 +50,10 @@ xui.Class('Module.CodeMirror5', 'xui.Module',{
                 styleActiveLine: true,
                 lineWrapping: false,
                 flattenSpans:false,
-                highlightSelectionMatches: {showToken: /^[$\w]\w*/},
                 foldGutter:true,
                 mode:mode.mode
             });
-            // CodeMirror.autoLoadMode(cm, mode.mode);
+            CodeMirror.autoLoadMode(cm, mode.mode);
         }
     },
     // export
