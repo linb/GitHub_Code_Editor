@@ -100,6 +100,7 @@ xui.Class('Module.CodeMirror5', 'xui.Module',{
                 gutters: ["CodeMirror-lint-markers","CodeMirror-linenumbers", "CodeMirror-foldgutter"],                
                 mode:mode.mine || mode.mode
             };
+            
 console.log(options);
             
             var cm = new CodeMirror(function(elt){
