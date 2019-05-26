@@ -26,7 +26,7 @@ xui.Class('Module.Editor', 'xui.Module',{
                 .setTop("0em")
             );
             
-            host.append(
+            append(
                 xui.create("xui.UI.ToolBar")
                 .setHost(host,"xui_ui_toolbar16")
                 .setItems([
