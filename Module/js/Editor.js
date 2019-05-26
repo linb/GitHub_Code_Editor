@@ -19,71 +19,56 @@ xui.Class('Module.Editor', 'xui.Module',{
             var host=this, children=[], append=function(child){children.push(child.get(0));};
             
             append(
-                xui.create("xui.UI.Block")
-                .setHost(host,"xui_ui_block19")
-                .setDock("bottom")
-                .setLeft("14.166666666666666em")
-                .setTop("25em")
-                .setHeight("3.3333333333333335em")
-            );
-            
-            host.xui_ui_block19.append(
-                xui.create("xui.UI.HTMLButton")
-                .setHost(host,"xui_ui_save")
-                .setLeft("1.6666666666666667em")
-                .setTop("0.5em")
-                .setWidth("10em")
-                .setHeight("2.3333333333333335em")
-                .setCaption("Save")
-                .onClick({
-                    "newbies":{ },
-                    "actions":[
-                        {
-                            "desc":"get file",
-                            "type":"control",
-                            "target":"xui_ui_cm",
-                            "args":[
-                                "{page.xui_ui_cm.getUIValue()}",
-                                "temp",
-                                "code"
-                            ],
-                            "method":"getUIValue",
-                            "redirection":"other:callback:call",
-                            "event":1
-                        },
-                        {
-                            "desc":"post msg",
-                            "type":"other",
-                            "target":"msg",
-                            "args":[
-                                "{xui.broadcast()}",
-                                "none",
-                                "",
-                                "saveFile",
-                                "{page.properties.path}",
-                                "{page.properties.sha}",
-                                "{temp.code}"
-                            ],
-                            "method":"gbroadcast",
-                            "redirection":"other:callback:call"
-                        },
-                        {
-                            "desc":"busy UI",
-                            "type":"other",
-                            "target":"msg",
-                            "args":[ ],
-                            "method":"busy"
-                        }
-                    ]
-                })
-            );
-            
-            append(
                 xui.create("xui.UI.Div")
                 .setHost(host,"xui_ui_cm")
                 .setDock("fill")
                 .setLeft("0em")
                 .setTop("0em")
+            );
+            
+            host.xui_ui_cm.append(
+                xui.create("xui.UI.ToolBar")
+                .setHost(host,"xui_ui_toolbar16")
+                .setItems([
+                    {
+                        "id":"grp1",
+                        "sub":[
+                            {
+                                "id":"reindent",
+                                "caption":"Reindent",
+                                "imageClass":"fa fa-lg fa-indent"
+                            },
+                            {
+                                "id":"save",
+                                "caption":"Save",
+                                "type":"",
+                                "imageClass":"fa fa-lg fa-save"
+                            }
+                        ],
+                        "caption":"grp1"
+                    }
+                ])
+                .setTop("19.166666666666668em")
+                .onClick([
+                    {
+                        "desc":"reindent",
+                        "type":"module",
+                        "target":"module_codemirror51",
+                        "args":[
+                            "{page.module_codemirror51.reindent}"
+                        ],
+                        "method":"$Functions.reindent",
+                        "conditions":[
+                            {
+                                "left":"{args[1].id}",
+                                "symbol":"=",
+                                "right":"reindent"
+                            }
+                        ],
+                        "redirection":"other:callback:call",
+                        "event":3
+                    }
+                ])
             );
             
             append(
