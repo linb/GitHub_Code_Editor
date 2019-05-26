@@ -34,9 +34,10 @@ xui.Class('Module.CodeMirror5', 'xui.Module',{
             var textarea = inputCtrl.getSubNode("INPUT").get(0),
                 ext = path.split(".").pop(),
                 mode = CodeMirror.findModeByExtension(ext) ||  CodeMirror.findModeByExtension("txt");
-            CodeMirror.fromTextArea(textarea,{
+            var cm = CodeMirror.fromTextArea(textarea,{
                mode: mode.mode 
             });
+            CodeMirror.autoLoadMode(cm, mode.mode);
         }
     },
     // export
