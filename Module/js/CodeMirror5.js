@@ -112,7 +112,7 @@ xui.Class('Module.CodeMirror5', 'xui.Module',{
                 extraKeys: {"Ctrl-Q": function(cm){ cm.foldCode(cm.getCursor()); }}
             };
             
-console.log(options);
+console.log(options); 
             
             var cm = new CodeMirror(function(elt){
                 div.getRoot().append(elt);
