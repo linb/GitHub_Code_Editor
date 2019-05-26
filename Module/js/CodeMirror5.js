@@ -34,10 +34,15 @@ xui.Class('Module.CodeMirror5', 'xui.Module',{
             var textarea = inputCtrl.getSubNode("INPUT").get(0),
                 ext = path.split(".").pop(),
                 mode = CodeMirror.findModeByExtension(ext) ||  CodeMirror.findModeByExtension("txt");
-            var cm = CodeMirror.fromTextArea(textarea,{
-               mode: mode.mode 
+            var cm = new CodeMirror(function(elt){
+                profile.getSubNode('BOX').append(elt);
+                
+                if(editorFontSize)
+                    elt.style.fontSize=editorFontSize+"px";
+            }, {
+                mode:mode.mode
             });
-            CodeMirror.autoLoadMode(cm, mode.mode);
+            // CodeMirror.autoLoadMode(cm, mode.mode);
         }
     },
     // export
