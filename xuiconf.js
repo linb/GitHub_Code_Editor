@@ -3,8 +3,8 @@
 
 // [[Gobal Code
 (function(){
-//    //xui.stringify(new Date) => "2017-10-21T12:53:43.522+0800"
-//    xui.setDateFormat('gmt');
+    //    //xui.stringify(new Date) => "2017-10-21T12:53:43.522+0800"
+    //    xui.setDateFormat('gmt');
 
 }());
 // ]]Gobal Code
