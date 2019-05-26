@@ -82,7 +82,6 @@ xui.Class('Module.Editor', 'xui.Module',{
              append(
                 xui.create("xui.UI.Div")
                 .setHost(host,"xui_ui_cm")
-                .setDirtyMark(false)
                 .setDock("fill")
                 .setLeft("0em")
                 .setTop("0em")
