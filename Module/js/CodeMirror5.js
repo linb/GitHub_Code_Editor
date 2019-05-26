@@ -117,7 +117,7 @@ console.log(options);
             var cm = new CodeMirror(function(elt){
                 div.getRoot().append(elt);
             }, options);
-            CodeMirror.autoLoadMode(cm, mdoe.mine || mode.mode);
+            CodeMirror.autoLoadMode(cm, mode.mine || mode.mode);
 
             div.getRoot().onSize(function(node){
                 if(cm && cm.setSize)cm.setSize(xui(node).width(),  xui(node).height());
