@@ -51,7 +51,6 @@ xui.Class('Module.CodeMirror5', 'xui.Module',{
                 "https://cdn.jsdelivr.net/npm/codemirror@5.47.0/addon/scroll/annotatescrollbar.js",
                 "https://cdn.jsdelivr.net/npm/codemirror@5.47.0/addon/search/matchesonscrollbar.js",
                 "https://cdn.jsdelivr.net/npm/codemirror@5.47.0/addon/search/jump-to-line.js"
-<style>            
             ]
         ],
         // To initialize properties
