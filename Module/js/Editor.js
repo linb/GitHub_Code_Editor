@@ -51,22 +51,60 @@ xui.Class('Module.Editor', 'xui.Module',{
                 .setTop("19.166666666666668em")
                 .onClick([
                     {
-                        "desc":"reindent",
-                        "type":"module",
-                        "target":"module_codemirror51",
+                        "desc":"save no",
+                        "type":"other",
+                        "target":"msg",
                         "args":[
-                            "{page.module_codemirror51.reindent}"
+                            undefined,
+                            "No change!",
+                            200,
+                            5000
                         ],
-                        "method":"$Functions.reindent",
+                        "method":"message",
                         "conditions":[
                             {
                                 "left":"{args[1].id}",
                                 "symbol":"=",
-                                "right":"reindent"
+                                "right":"save"
+                            },
+                            {
+                                "left":"{page.properties.code}",
+                                "symbol":"empty",
+                                "right":""
                             }
                         ],
-                        "redirection":"other:callback:call",
                         "event":3
+                    },
+                    {
+                        "desc":"save code",
+                        "type":"other",
+                        "target":"msg",
+                        "args":[
+                            "{xui.broadcast()}",
+                            undefined,
+                            undefined,
+                            "savecode",
+                            "{page.properties.code}"
+                        ],
+                        "method":"gbroadcast",
+                        "conditions":[
+                            {
+                                "left":"{args[1].id}",
+                                "symbol":"=",
+                                "right":"save"
+                            }
+                        ],
+                        "redirection":"other:callback:call"
+                    },
+                    {
+                        "desc":"clear code",
+                        "type":"other",
+                        "target":"var",
+                        "args":[
+                            "code",
+                            "{undefined}"
+                        ],
+                        "method":"page.properties"
                     }
                 ])
             );
@@ -74,6 +112,20 @@ xui.Class('Module.Editor', 'xui.Module',{
             append(
                 xui.create("Module.CodeMirror5", "xui.Module")
                 .setHost(host,"module_codemirror51")
+                .setEvents({
+                    "onChange":[
+                        {
+                            "desc":"get code",
+                            "type":"other",
+                            "target":"var",
+                            "args":[
+                                "code",
+                                "{args[0]}"
+                            ],
+                            "method":"page.properties"
+                        }
+                    ]
+                })
             );
             
             append(
