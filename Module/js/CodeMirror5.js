@@ -10,7 +10,6 @@ xui.Class('Module.CodeMirror5', 'xui.Module',{
                 "https://cdn.jsdelivr.net/npm/codemirror@5.47.0/mode/meta.js",
                 "https://cdn.jsdelivr.net/npm/codemirror@5.47.0/addon/mode/loadmode.js",
                 "https://cdn.jsdelivr.net/npm/codemirror@5.47.0/keymap/sublime.js",
-                "https://cdn.jsdelivr.net/npm/codemirror@5.47.0/addon/lint/jshint.js",
                 "https://cdn.jsdelivr.net/npm/codemirror@5.47.0/addon/lint/jsonlint.js",
                 "https://cdn.jsdelivr.net/npm/codemirror@5.47.0/addon/lint/csslint.js",
                 "https://cdn.jsdelivr.net/npm/codemirror@5.47.0/addon/lint/htmlhint.js",
