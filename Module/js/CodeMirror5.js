@@ -2,6 +2,9 @@
 // Ensure that all the value of "key/value pair" does not refer to external variables
 // Sub module don't support Dependencies, and those async functions
 xui.Class('Module.CodeMirror5', 'xui.Module',{
+    Initialize:function(){
+      CodeMirror.modeURL = "https://cdn.jsdelivr.net/npm/codemirror@5.47.0/mode/%N/%N.js";
+    },
     Instance:{
         Dependencies:[
             "https://cdn.jsdelivr.net/npm/codemirror@5.47.0/lib/codemirror.css",
