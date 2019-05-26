@@ -8,7 +8,7 @@ xui.Class('Module.CodeMirror5', 'xui.Module',{
             "https://cdn.jsdelivr.net/npm/codemirror@5.47.0/addon/hint/show-hint.css",
             "https://cdn.jsdelivr.net/npm/codemirror@5.47.0/addon/lint/lint.css",
             "https://cdn.jsdelivr.net/npm/codemirror@5.47.0/addon/dialog/dialog.css">
-            "https://cdn.jsdelivr.net/npm/codemirror@5.47.0/addon/search/matchesonscrollbar.css">            
+            "https://cdn.jsdelivr.net/npm/codemirror@5.47.0/addon/search/matchesonscrollbar.css"
         ],
         // Required modules
         Required:[
