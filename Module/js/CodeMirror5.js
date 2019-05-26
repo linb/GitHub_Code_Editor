@@ -92,9 +92,9 @@ xui.Class('Module.CodeMirror5', 'xui.Module',{
         $EventHandlers:{
         },
         $Functions:{
-            attachCodeMirror:function( div/*xui.UI.Div, the Container*/, 
-                                    path/*String, file path*/,
-                                    initValue/*String, the code*/
+            attachCodeMirror:function( div /*xui.UI.Div, the Container*/, 
+                                    path /*String, file path, with file ext*/,
+                                    initValue /*String, the code*/
             ){}
         }
     }
