@@ -38,6 +38,23 @@ xui.Class('Module.CodeMirror5', 'xui.Module',{
                 div.getRoot().append(elt);
             }, {
                 value: value,
+                smartIndent:true,
+                indentUnit:4,
+                tabSize:4,
+                indentWithTabs:false,
+
+                keyMap: "sublime",
+                
+                matchBrackets: true,
+                continueComments: "Enter",
+                autoCloseBrackets:true,
+                lineNumbers:true,
+                lint:(ext=='js'||ext=='json'||ext=='css'||ext=='html')?true:false,
+                styleActiveLine: true,
+                lineWrapping: false,
+                flattenSpans:false,
+                highlightSelectionMatches: {showToken: /^[$\w]\w*/},
+                foldGutter:true,
                 mode:mode.mode
             });
             // CodeMirror.autoLoadMode(cm, mode.mode);
