@@ -5,6 +5,7 @@ xui.Class('Module.CodeMirror5', 'xui.Module',{
     Instance:{
         Dependencies:[
             "https://cdn.jsdelivr.net/npm/codemirror@5.47.0/lib/codemirror.css",
+            "https://cdn.jsdelivr.net/npm/codemirror@5.47.0/addon/hint/show-hint.css",
             "https://cdn.jsdelivr.net/npm/codemirror@5.47.0/addon/lint/lint.css"
         ],
         // Required modules
@@ -13,6 +14,13 @@ xui.Class('Module.CodeMirror5', 'xui.Module',{
                 "https://cdn.jsdelivr.net/npm/codemirror@5.47.0/mode/meta.js",
                 "https://cdn.jsdelivr.net/npm/codemirror@5.47.0/addon/mode/loadmode.js",
                 "https://cdn.jsdelivr.net/npm/codemirror@5.47.0/keymap/sublime.js",
+                "https://cdn.jsdelivr.net/npm/codemirror@5.47.0/addon/hint/anyword-hint.js",
+                "https://cdn.jsdelivr.net/npm/codemirror@5.47.0/addon/hint/css-hint.js",
+                "https://cdn.jsdelivr.net/npm/codemirror@5.47.0/addon/hint/html-hint.js",
+                "https://cdn.jsdelivr.net/npm/codemirror@5.47.0/addon/hint/javascript-hint.js",
+                "https://cdn.jsdelivr.net/npm/codemirror@5.47.0/addon/hint/show-hint.js",
+                "https://cdn.jsdelivr.net/npm/codemirror@5.47.0/addon/hint/sql-hint.js",
+                "https://cdn.jsdelivr.net/npm/codemirror@5.47.0/addon/hint/xml-hint.js",              
                 "https://cdn.jsdelivr.net/npm/codemirror@5.47.0/addon/lint/lint.js",
                 "https://cdn.jsdelivr.net/npm/codemirror@5.47.0/addon/lint/javascript-lint.js",
                 "https://cdn.jsdelivr.net/npm/codemirror@5.47.0/addon/lint/json-lint.js",
