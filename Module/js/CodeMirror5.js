@@ -131,8 +131,8 @@ xui.Class('Module.CodeMirror5', 'xui.Module',{
             module.$cm = div.get(0).$cm = cm;
         },
         reindent : function(){
-            if(module.$cm){
-                var cm = module.$cm,
+            if(this.$cm){
+                var cm = this.$cm,
                     doc = cm.doc;
                 if(doc.somethingSelected()){
                     var p1 = doc.getCursor("start"),
