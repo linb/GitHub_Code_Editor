@@ -87,6 +87,8 @@ xui.Class('Module.CodeMirror5', 'xui.Module',{
                 lineWrapping: false,
                 flattenSpans:false,
                 foldGutter:true,
+                highlightSelectionMatches: {showToken: /^[$\w]\w*/},
+                gutters: ["CodeMirror-lint-markers","CodeMirror-linenumbers", "CodeMirror-foldgutter"],                
                 mode:mode.mode
             });
             CodeMirror.autoLoadMode(cm, mode.mode);
