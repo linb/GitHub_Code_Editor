@@ -90,6 +90,7 @@ xui.Class('Module.CodeMirror5', 'xui.Module',{
             div.getRoot().onSize(function(node){
                 if(cm && cm.setSize)cm.setSize(xui(node).width(),  xui(node).height());
             },"cm");
+            cm.setSize(div.getRoot().width(),  div.getRoot().height());
             
             div.get(0).$cm = cm;
         }
