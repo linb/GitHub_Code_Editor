@@ -48,8 +48,8 @@ xui.Class('Module.CodeMirror5', 'xui.Module',{
                 "https://cdn.jsdelivr.net/npm/codemirror@5.47.0/addon/comment/comment.js",
                 "https://cdn.jsdelivr.net/npm/codemirror@5.47.0/addon/comment/continuecomment.js",
                 "https://cdn.jsdelivr.net/npm/codemirror@5.47.0/addon/dialog/dialog.js",
-                "https://cdn.jsdelivr.net/npm/codemirror@5.47.0/addon/search/searchcursor.js",
                 "https://cdn.jsdelivr.net/npm/codemirror@5.47.0/addon/search/search.js",
+                "https://cdn.jsdelivr.net/npm/codemirror@5.47.0/addon/search/searchcursor.js",
                 "https://cdn.jsdelivr.net/npm/codemirror@5.47.0/addon/scroll/annotatescrollbar.js",
                 "https://cdn.jsdelivr.net/npm/codemirror@5.47.0/addon/search/matchesonscrollbar.js",
                 "https://cdn.jsdelivr.net/npm/codemirror@5.47.0/addon/search/jump-to-line.js"
@@ -96,6 +96,7 @@ xui.Class('Module.CodeMirror5', 'xui.Module',{
                 lineWrapping: false,
                 flattenSpans:false,
                 foldGutter:true,
+                lineWrapping: true,
                 highlightSelectionMatches: {showToken: /^[$\w]\w*/},
                 gutters: ["CodeMirror-lint-markers","CodeMirror-linenumbers", "CodeMirror-foldgutter"],                
                 mode:mode.mine || mode.mode
