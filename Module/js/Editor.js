@@ -41,9 +41,9 @@ xui.Class('Module.Editor', 'xui.Module',{
                         {
                             "desc":"get file",
                             "type":"control",
-                            "target":"xui_ui_textarea",
+                            "target":"xui_ui_cm",
                             "args":[
-                                "{page.xui_ui_textarea.getUIValue()}",
+                                "{page.xui_ui_cm.getUIValue()}",
                                 "temp",
                                 "code"
                             ],
@@ -80,36 +80,12 @@ xui.Class('Module.Editor', 'xui.Module',{
  
             
              append(
-                xui.create("xui.UI.Input")
-                .setHost(host,"xui_ui_textarea")
+                xui.create("xui.UI.Div")
+                .setHost(host,"xui_ui_cm")
                 .setDirtyMark(false)
                 .setDock("fill")
                 .setLeft("0em")
                 .setTop("0em")
-                .setHeight("10em")
-                .setMultiLines(true)
-                .onChange([
-                    {
-                        "desc":"sync editor",
-                        "type":"module",
-                        "target":"xui_module_code_editor",
-                        "args":[
-                            "{page.xui_module_code_editor.setValue}",
-                            undefined,
-                            undefined,
-                            "{args[2]}"
-                        ],
-                        "method":"$Functions.setValue",
-                        "redirection":"other:callback:call",
-                        "conditions":[
-                            {
-                                "left":"{global.DontSetBackNow}",
-                                "symbol":"!=",
-                                "right":"{true}"
-                            }
-                        ]
-                    }
-                ])
             );
             
             append(
@@ -194,9 +170,9 @@ xui.Class('Module.Editor', 'xui.Module',{
                     {
                         "desc":"set code to txt",
                         "type":"control",
-                        "target":"xui_ui_textarea",
+                        "target":"xui_ui_cm",
                         "args":[
-                            "{page.xui_ui_textarea.setUIValue()}",
+                            "{page.xui_ui_cm.setUIValue()}",
                             undefined,
                             undefined,
                             "{args[1]}"
@@ -219,7 +195,7 @@ xui.Class('Module.Editor', 'xui.Module',{
                             "{page.module_codemirror51.attachCodeMirror}",
                             undefined,
                             undefined,
-                            "{page.xui_ui_textarea}",
+                            "{page.xui_ui_cm}",
                             "{args[0]}"
                         ],
                         "method":"$Functions.attachCodeMirror",
