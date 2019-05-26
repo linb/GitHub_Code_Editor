@@ -29,6 +29,14 @@ xui.Class('Module.CodeMirror5', 'xui.Module',{
         },
         // To determine how properties affects this module
         propSetAction : function(prop){
+        },
+        loadCodeMirror : function(inputCtrl, path){
+            var textarea = inputCtrl.getSubNode("INPUT").get(0),
+                ext = path.split(".").pop(),
+                mode = CodeMirror.findModeByExtension(ext) ||  CodeMirror.findModeByExtension("txt");
+            CodeMirror.fromTextArea(textarea,{
+               mode: mode 
+            });
         }
     },
     // export
