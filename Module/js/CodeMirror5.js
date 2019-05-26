@@ -72,7 +72,7 @@ xui.Class('Module.CodeMirror5', 'xui.Module',{
             var cm = new CodeMirror(function(elt){
                 div.getRoot().append(elt);
             }, {
-                value: initValue,
+                value: initValue || "",
                 smartIndent:true,
                 indentUnit:4,
                 tabSize:4,
