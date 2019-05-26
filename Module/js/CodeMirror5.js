@@ -51,7 +51,7 @@ xui.Class('Module.CodeMirror5', 'xui.Module',{
         // To determine how properties affects this module
         propSetAction : function(prop){
         },
-        attachCodeMirror : function(div, path, value){
+        attachCodeMirror : function(div, path, initValue){
             if(div.get(0).$cm)return;
             debugger;
             var ext = path.split(".").pop(),
@@ -59,7 +59,7 @@ xui.Class('Module.CodeMirror5', 'xui.Module',{
             var cm = new CodeMirror(function(elt){
                 div.getRoot().append(elt);
             }, {
-                value: value,
+                value: initValue,
                 smartIndent:true,
                 indentUnit:4,
                 tabSize:4,
@@ -94,7 +94,7 @@ xui.Class('Module.CodeMirror5', 'xui.Module',{
         $Functions:{
             attachCodeMirror:function( div/*xui.UI.Div, the Container*/, 
                                     path/*String, file path*/,
-                                    value/*String, the code*/
+                                    initValue/*String, the code*/
             ){}
         }
     }
