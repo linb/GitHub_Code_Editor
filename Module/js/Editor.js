@@ -77,9 +77,8 @@ xui.Class('Module.Editor', 'xui.Module',{
                     ]
                 })
             );
- 
             
-             append(
+            append(
                 xui.create("xui.UI.Div")
                 .setHost(host,"xui_ui_cm")
                 .setDock("fill")
@@ -168,15 +167,17 @@ xui.Class('Module.Editor', 'xui.Module',{
                 "actions":[
                     {
                         "desc":"set code to txt",
-                        "type":"control",
-                        "target":"xui_ui_cm",
+                        "type":"module",
+                        "target":"module_codemirror51",
                         "args":[
-                            "{page.xui_ui_cm.setUIValue()}",
+                            "{page.module_codemirror51.attachCodeMirror}",
                             undefined,
                             undefined,
+                            "{page.xui_ui_cm}",
+                            "{args[0]}",
                             "{args[1]}"
                         ],
-                        "method":"setUIValue",
+                        "method":"$Functions.attachCodeMirror",
                         "redirection":"other:callback:call"
                     },
                     {
