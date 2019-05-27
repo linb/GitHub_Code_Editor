@@ -42,7 +42,8 @@ xui.Class('Module.Editor', 'xui.Module',{
                                 "id":"save",
                                 "caption":"Save",
                                 "type":"",
-                                "imageClass":"fa fa-lg fa-save"
+                                "imageClass":"fa fa-lg fa-save",
+                                "hidden":true
                             }
                         ],
                         "caption":"grp1"
