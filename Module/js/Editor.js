@@ -73,7 +73,8 @@ xui.Class('Module.Editor', 'xui.Module',{
                                 "right":""
                             }
                         ],
-                        "event":3
+                        "event":3,
+                        "return":false
                     },
                     {
                         "desc":"save code",
