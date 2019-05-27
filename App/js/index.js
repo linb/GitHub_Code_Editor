@@ -3,8 +3,14 @@ xui.Class('App', 'xui.Module',{
         iniComponents : function(){
             // [[Code created by CrossUI RAD Studio
             var host=this, children=[], append=function(child){children.push(child.get(0));};
-            
             append(
+                xui.create("xui.UI.Div")
+                .setHost(host,"xui_root")
+                .setDock("fill")
+                .setOverflow("hidden")
+            );
+            
+            host.xui_root.append(
                 xui.create("xui.UI.Layout")
                 .setHost(host,"xui_ui_layout3")
                 .setItems([
