@@ -9,10 +9,10 @@ xui.Class('App', 'xui.Module',{
                 .setDock("fill")
                 .setOverflow("hidden")
             );
-            
+
             host.xui_root.append(
                 xui.create("xui.UI.Layout")
-                .setHost(host,"xui_ui_layout3")
+                .setHost(host,"xui_ui_layout3") 
                 .setItems([
                     {
                         "id":"before",
@@ -34,7 +34,7 @@ xui.Class('App', 'xui.Module',{
                 .setTop("0em")
                 .setType("horizontal")
             );
-            
+
             host.xui_ui_layout3.append(
                 xui.create("xui.UI.Panel")
                 .setHost(host,"xui_panel_left")
@@ -75,7 +75,7 @@ xui.Class('App', 'xui.Module',{
                 }),
                 "before"
             );
-            
+
             host.xui_panel_left.append(
                 xui.create("xui.UI.ToolBar")
                 .setHost(host,"xui_tb_files")
@@ -161,7 +161,7 @@ xui.Class('App', 'xui.Module',{
                     }
                 ])
             );
-            
+
             host.xui_panel_left.append(
                 xui.create("xui.UI.TreeView")
                 .setHost(host,"xui_tv_folders")
@@ -392,7 +392,7 @@ xui.Class('App', 'xui.Module',{
                     ]
                 })
             );
-            
+
             host.xui_ui_layout3.append(
                 xui.create("xui.UI.Tabs")
                 .setHost(host,"xui_tabs_code")
@@ -401,7 +401,7 @@ xui.Class('App', 'xui.Module',{
                 .setValue("a"),
                 "main"
             );
-            
+
             host.xui_root.append(
                 xui.create("xui.UI.Block")
                 .setHost(host,"xui_ui_block15")
@@ -435,7 +435,7 @@ xui.Class('App', 'xui.Module',{
                     }
                 })
             );
-            
+
             host.xui_ui_block15.append(
                 xui.create("xui.UI.Div")
                 .setHost(host,"xui_ui_div26")
@@ -445,7 +445,7 @@ xui.Class('App', 'xui.Module',{
                 .setHeight("3.3333333333333335em")
                 .setRight("1em")
             );
-            
+
             host.xui_ui_div26.append(
                 xui.create("xui.UI.Image")
                 .setHost(host,"xui_ui_avatar")
@@ -460,7 +460,7 @@ xui.Class('App', 'xui.Module',{
                     }
                 })
             );
-            
+
             host.xui_ui_div26.append(
                 xui.create("xui.UI.Label")
                 .setHost(host,"xui_ui_labelUser")
@@ -475,7 +475,7 @@ xui.Class('App', 'xui.Module',{
                     }
                 })
             );
-            
+
             host.xui_ui_div26.append(
                 xui.create("xui.UI.Icon")
                 .setHost(host,"xui_ui_icon3")
@@ -484,7 +484,7 @@ xui.Class('App', 'xui.Module',{
                 .setPosition("relative")
                 .setImageClass("xui-uicmd-arrowdrop")
             );
-            
+
             host.xui_ui_block15.append(
                 xui.create("xui.UI.Span")
                 .setHost(host,"xui_ui_span182")
@@ -493,7 +493,7 @@ xui.Class('App', 'xui.Module',{
                 .setHeight("1.6666666666666667em")
                 .setHtml("<svg aria-label=\"Repository\" class=\"octicon octicon-repo flex-shrink-0\" viewBox=\"0 0 12 16\" version=\"1.1\" width=\"12\" height=\"16\" role=\"img\"><path fill-rule=\"evenodd\" d=\"M4 9H3V8h1v1zm0-3H3v1h1V6zm0-2H3v1h1V4zm0-2H3v1h1V2zm8-1v12c0 .55-.45 1-1 1H6v2l-1.5-1.5L3 16v-2H1c-.55 0-1-.45-1-1V1c0-.55.45-1 1-1h10c.55 0 1 .45 1 1zm-1 10H1v2h2v-1h3v1h5v-2zm0-10H2v9h9V1z\"></path></svg>")
             );
-            
+
             host.xui_ui_block15.append(
                 xui.create("xui.UI.Label")
                 .setHost(host,"xui_ui_label1")
@@ -508,7 +508,7 @@ xui.Class('App', 'xui.Module',{
                     "KEY":{ }
                 })
             );
-            
+
             host.xui_ui_block15.append(
                 xui.create("xui.UI.Button")
                 .setHost(host,"xui_btn_popRepoList")
@@ -548,7 +548,7 @@ xui.Class('App', 'xui.Module',{
                     }
                 })
             );
-            
+
             host.xui_root.append(
                 xui.create("xui.UI.List")
                 .setHost(host,"xui_lst_usermenu")
@@ -612,7 +612,7 @@ xui.Class('App', 'xui.Module',{
                     }
                 })
             );
-            
+
             host.xui_root.append(
                 xui.create("xui.UI.Block")
                 .setHost(host,"xui_ui_block16")
@@ -628,7 +628,7 @@ xui.Class('App', 'xui.Module',{
                     }
                 })
             );
-            
+
             host.xui_root.append(
                 xui.create("xui.UI.Block")
                 .setHost(host,"xui_sel_repo")
@@ -642,7 +642,7 @@ xui.Class('App', 'xui.Module',{
                 .setBackground("#FFFFFF")
                 .setOverflow("hidden")
             );
-            
+
             host.xui_sel_repo.append(
                 xui.create("xui.UI.ComboInput")
                 .setHost(host,"xui_inp_search")
@@ -674,7 +674,7 @@ xui.Class('App', 'xui.Module',{
                     }
                 ])
             );
-            
+
             host.xui_sel_repo.append(
                 xui.create("xui.UI.List")
                 .setHost(host,"xui_lst_repos")
@@ -710,7 +710,7 @@ xui.Class('App', 'xui.Module',{
                     }
                 ])
             );
-            
+
             host.xui_sel_repo.append(
                 xui.create("xui.UI.PageBar")
                 .setHost(host,"xui_ui_pagebar5")
@@ -759,7 +759,7 @@ xui.Class('App', 'xui.Module',{
                     }
                 ])
             );
-            
+
             append(
                 xui.create("Module.GitHubAPI", "xui.Module")
                 .setHost(host,"module_githubapi1")
@@ -1032,7 +1032,7 @@ xui.Class('App', 'xui.Module',{
                     ]
                 })
             );
-            
+
             append(
                 xui.create("xui.UI.CSSBox")
                 .setHost(host,"xui_ui_cssbox1")
@@ -1059,7 +1059,7 @@ xui.Class('App', 'xui.Module',{
                     "background-image":"none"
                 })
             );
-            
+
             return children;
             // ]]Code created by CrossUI RAD Studio
         },
