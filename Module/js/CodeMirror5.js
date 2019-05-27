@@ -4,7 +4,10 @@
 xui.Class('Module.CodeMirror5', 'xui.Module',{
     Instance:{
         Dependencies:[
-            "https://cdn.jsdelivr.net/npm/codemirror@5.47.0/lib/codemirror.css",
+            {
+                uri:"https://cdn.jsdelivr.net/npm/codemirror@5.47.0/lib/codemirror.css",
+                crossorigin:"anonymous"
+            },
             "https://cdn.jsdelivr.net/npm/codemirror@5.47.0/addon/lint/lint.css",
             "https://cdn.jsdelivr.net/npm/codemirror@5.47.0/addon/hint/show-hint.css",
             "https://cdn.jsdelivr.net/npm/codemirror@5.47.0/addon/dialog/dialog.css",
@@ -14,54 +17,58 @@ xui.Class('Module.CodeMirror5', 'xui.Module',{
         ],
         // Required modules
         Required:[
-            "https://cdn.jsdelivr.net/npm/codemirror@5.47.0/lib/codemirror.min.js",
+            {
+                id:"CodeMirror",
+                uri:"https://cdn.jsdelivr.net/npm/codemirror@5.47.0/lib/codemirror.min.js",
+                crossorigin:"anonymous"
+            },
             
-            "https://cdn.jsdelivr.net/npm/htmlhint@latest/dist/htmlhint.js",
-            "https://cdn.jsdelivr.net/npm/jshint@2.9.6/dist/jshint.js",
-            "https://cdn.jsdelivr.net/npm/csslint@1.0.5/dist/csslint.js",
-            "https://cdn.jsdelivr.net/npm/jsonlint@1.6.3/lib/jsonlint.min.js",
+            "[HTMLHint]https://cdn.jsdelivr.net/npm/htmlhint@latest/dist/htmlhint.js",
+            "[JSHINT]https://cdn.jsdelivr.net/npm/jshint@2.9.6/dist/jshint.js",
+            "[CSSLint]https://cdn.jsdelivr.net/npm/csslint@1.0.5/dist/csslint.js",
+            "[jsonlint]https://cdn.jsdelivr.net/npm/jsonlint@1.6.3/lib/jsonlint.min.js",
             
             [
-                "https://cdn.jsdelivr.net/npm/codemirror@5.47.0/mode/meta.js",
-                "https://cdn.jsdelivr.net/npm/codemirror@5.47.0/addon/mode/loadmode.js",
-                "https://cdn.jsdelivr.net/npm/codemirror@5.47.0/addon/lint/lint.js",
-                "https://cdn.jsdelivr.net/npm/codemirror@5.47.0/keymap/sublime.js",
-                "https://cdn.jsdelivr.net/npm/codemirror@5.47.0/addon/fold/foldcode.js",
-                "https://cdn.jsdelivr.net/npm/codemirror@5.47.0/addon/search/search.js",
-                "https://cdn.jsdelivr.net/npm/codemirror@5.47.0/addon/hint/show-hint.js"
+                "[CodeMirror.modeInfo]https://cdn.jsdelivr.net/npm/codemirror@5.47.0/mode/meta.js",
+                "[CodeMirror.requireMode]https://cdn.jsdelivr.net/npm/codemirror@5.47.0/addon/mode/loadmode.js",
+                "[CodeMirror.prototype.performLint]https://cdn.jsdelivr.net/npm/codemirror@5.47.0/addon/lint/lint.js",
+                "[CodeMirror.keyMap.macSublime]https://cdn.jsdelivr.net/npm/codemirror@5.47.0/keymap/sublime.js",
+                "[CodeMirror.prototype.foldCode]https://cdn.jsdelivr.net/npm/codemirror@5.47.0/addon/fold/foldcode.js",
+                "[CodeMirror.commands.find]https://cdn.jsdelivr.net/npm/codemirror@5.47.0/addon/search/search.js",
+                "[CodeMirror.prototype.showHint]https://cdn.jsdelivr.net/npm/codemirror@5.47.0/addon/hint/show-hint.js"
             ],
             [
                 [
-                    "https://cdn.jsdelivr.net/npm/codemirror@5.47.0/addon/hint/anyword-hint.js",
-                    "https://cdn.jsdelivr.net/npm/codemirror@5.47.0/addon/hint/css-hint.js",
-                    "https://cdn.jsdelivr.net/npm/codemirror@5.47.0/addon/hint/html-hint.js",
-                    "https://cdn.jsdelivr.net/npm/codemirror@5.47.0/addon/hint/javascript-hint.js",
-                    "https://cdn.jsdelivr.net/npm/codemirror@5.47.0/addon/hint/sql-hint.js",
-                    "https://cdn.jsdelivr.net/npm/codemirror@5.47.0/addon/hint/xml-hint.js",              
-                    "https://cdn.jsdelivr.net/npm/codemirror@5.47.0/addon/lint/javascript-lint.js",
-                    "https://cdn.jsdelivr.net/npm/codemirror@5.47.0/addon/lint/json-lint.js",
-                    "https://cdn.jsdelivr.net/npm/codemirror@5.47.0/addon/lint/css-lint.js",
-                    "https://cdn.jsdelivr.net/npm/codemirror@5.47.0/addon/lint/html-lint.js"
+                    "[CodeMirror.helpers.hint.anyword]https://cdn.jsdelivr.net/npm/codemirror@5.47.0/addon/hint/anyword-hint.js",
+                    "[CodeMirror.helpers.hint.css]https://cdn.jsdelivr.net/npm/codemirror@5.47.0/addon/hint/css-hint.js",
+                    "[CodeMirror.helpers.hint.html]https://cdn.jsdelivr.net/npm/codemirror@5.47.0/addon/hint/html-hint.js",
+                    "[CodeMirror.helpers.hint.javascript]https://cdn.jsdelivr.net/npm/codemirror@5.47.0/addon/hint/javascript-hint.js",
+                    "[CodeMirror.helpers.hint.sql]https://cdn.jsdelivr.net/npm/codemirror@5.47.0/addon/hint/sql-hint.js",
+                    "[CodeMirror.helpers.hint.xml]https://cdn.jsdelivr.net/npm/codemirror@5.47.0/addon/hint/xml-hint.js",              
+                    "[CodeMirror.helpers.lint.javascript]https://cdn.jsdelivr.net/npm/codemirror@5.47.0/addon/lint/javascript-lint.js",
+                    "[CodeMirror.helpers.lint.json]https://cdn.jsdelivr.net/npm/codemirror@5.47.0/addon/lint/json-lint.js",
+                    "[CodeMirror.helpers.lint.css]https://cdn.jsdelivr.net/npm/codemirror@5.47.0/addon/lint/css-lint.js",
+                    "[CodeMirror.helpers.lint.html]https://cdn.jsdelivr.net/npm/codemirror@5.47.0/addon/lint/html-lint.js"
                 ],
                 [
-                    "https://cdn.jsdelivr.net/npm/codemirror@5.47.0/addon/fold/foldgutter.js",
-                    "https://cdn.jsdelivr.net/npm/codemirror@5.47.0/addon/fold/brace-fold.js",
-                    "https://cdn.jsdelivr.net/npm/codemirror@5.47.0/addon/fold/xml-fold.js",
-                    "https://cdn.jsdelivr.net/npm/codemirror@5.47.0/addon/fold/comment-fold.js"
+                    "[CodeMirror.defaults.foldGutter]https://cdn.jsdelivr.net/npm/codemirror@5.47.0/addon/fold/foldgutter.js",
+                    "[CodeMirror.helpers.fold.brace]https://cdn.jsdelivr.net/npm/codemirror@5.47.0/addon/fold/brace-fold.js",
+                    "[CodeMirror.helpers.fold.xml]https://cdn.jsdelivr.net/npm/codemirror@5.47.0/addon/fold/xml-fold.js",
+                    "[CodeMirror.helpers.fold.comment]https://cdn.jsdelivr.net/npm/codemirror@5.47.0/addon/fold/comment-fold.js"
                 ],
                 [
-                    "https://cdn.jsdelivr.net/npm/codemirror@5.47.0/addon/dialog/dialog.js",
-                    "https://cdn.jsdelivr.net/npm/codemirror@5.47.0/addon/selection/active-line.js",
-                    "https://cdn.jsdelivr.net/npm/codemirror@5.47.0/addon/edit/matchbrackets.js",
-                    "https://cdn.jsdelivr.net/npm/codemirror@5.47.0/addon/edit/closebrackets.js",
-                    "https://cdn.jsdelivr.net/npm/codemirror@5.47.0/addon/comment/comment.js",
-                    "https://cdn.jsdelivr.net/npm/codemirror@5.47.0/addon/comment/continuecomment.js",
-                    "https://cdn.jsdelivr.net/npm/codemirror@5.47.0/addon/search/searchcursor.js",
-                    "https://cdn.jsdelivr.net/npm/codemirror@5.47.0/addon/search/match-highlighter.js",
-                    "https://cdn.jsdelivr.net/npm/codemirror@5.47.0/addon/search/searchcursor.js",
-                    "https://cdn.jsdelivr.net/npm/codemirror@5.47.0/addon/scroll/annotatescrollbar.js",
-                    "https://cdn.jsdelivr.net/npm/codemirror@5.47.0/addon/search/matchesonscrollbar.js",
-                    "https://cdn.jsdelivr.net/npm/codemirror@5.47.0/addon/search/jump-to-line.js"
+                    "[CodeMirror.prototype.openDialog]https://cdn.jsdelivr.net/npm/codemirror@5.47.0/addon/dialog/dialog.js",
+                    "[CodeMirror.defaults.styleActiveLine]https://cdn.jsdelivr.net/npm/codemirror@5.47.0/addon/selection/active-line.js",
+                    "[CodeMirror.prototype.matchBrackets]https://cdn.jsdelivr.net/npm/codemirror@5.47.0/addon/edit/matchbrackets.js",
+                    "[CodeMirror.defaults.autoCloseBrackets]https://cdn.jsdelivr.net/npm/codemirror@5.47.0/addon/edit/closebrackets.js",
+                    "[CodeMirror.prototype.toggleComment]https://cdn.jsdelivr.net/npm/codemirror@5.47.0/addon/comment/comment.js",
+                    "[CodeMirror.defaults.continueComments]https://cdn.jsdelivr.net/npm/codemirror@5.47.0/addon/comment/continuecomment.js",
+                    "[CodeMirror.prototype.getSearchCursor]https://cdn.jsdelivr.net/npm/codemirror@5.47.0/addon/search/searchcursor.js",
+                    "[CodeMirror.defaults.highlightSelectionMatches]https://cdn.jsdelivr.net/npm/codemirror@5.47.0/addon/search/match-highlighter.js",
+                    "[CodeMirror.prototype.getSearchCursor]https://cdn.jsdelivr.net/npm/codemirror@5.47.0/addon/search/searchcursor.js",
+                    "[CodeMirror.prototype.annotateScrollbar]https://cdn.jsdelivr.net/npm/codemirror@5.47.0/addon/scroll/annotatescrollbar.js",
+                    "[CodeMirror.prototype.showMatchesOnScrollbar]https://cdn.jsdelivr.net/npm/codemirror@5.47.0/addon/search/matchesonscrollbar.js",
+                    "[CodeMirror.commands.jumpToLine]https://cdn.jsdelivr.net/npm/codemirror@5.47.0/addon/search/jump-to-line.js"
                 ]
             ]
         ],
