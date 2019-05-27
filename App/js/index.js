@@ -402,7 +402,7 @@ xui.Class('App', 'xui.Module',{
                 "main"
             );
             
-            append(
+            host.xui_root.append(
                 xui.create("xui.UI.Block")
                 .setHost(host,"xui_ui_block15")
                 .setDock("top")
@@ -549,7 +549,7 @@ xui.Class('App', 'xui.Module',{
                 })
             );
             
-            append(
+            host.xui_root.append(
                 xui.create("xui.UI.List")
                 .setHost(host,"xui_lst_usermenu")
                 .setDirtyMark(false)
@@ -613,7 +613,7 @@ xui.Class('App', 'xui.Module',{
                 })
             );
             
-            append(
+            host.xui_root.append(
                 xui.create("xui.UI.Block")
                 .setHost(host,"xui_ui_block16")
                 .setDock("bottom")
@@ -629,7 +629,7 @@ xui.Class('App', 'xui.Module',{
                 })
             );
             
-            append(
+            host.xui_root.append(
                 xui.create("xui.UI.Block")
                 .setHost(host,"xui_sel_repo")
                 .setLeft("0.8333333333333334em")
