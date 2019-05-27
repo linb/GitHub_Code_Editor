@@ -117,6 +117,22 @@ xui.Class('Module.Editor', 'xui.Module',{
                         ]
                     },
                     {
+                        "desc":"hide save",
+                        "type":"control",
+                        "target":"xui_ui_toolbar16",
+                        "args":[
+                            "save"
+                        ],
+                        "method":"hideItems",
+                        "conditions":[
+                            {
+                                "left":"{args[1].id}",
+                                "symbol":"=",
+                                "right":"save"
+                            }
+                        ]
+                    },
+                    {
                         "desc":"reindent",
                         "type":"module",
                         "target":"module_codemirror51",
@@ -150,6 +166,15 @@ xui.Class('Module.Editor', 'xui.Module',{
                                 "{args[0]}"
                             ],
                             "method":"page.properties"
+                        },
+                        {
+                            "desc":"show save",
+                            "type":"control",
+                            "target":"xui_ui_toolbar16",
+                            "args":[
+                                "save"
+                            ],
+                            "method":"showItems"
                         }
                     ]
                 })
