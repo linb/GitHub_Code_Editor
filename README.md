@@ -30,4 +30,8 @@ This project was created by codeless programming Builder: https://crossui.com/RA
 * Various themes
 * More...
 
+> Sibling Project: https://github.com/linb/GitHub_JSON_Editor / https://linb.github.io/GitHub_JSON_Editor
+
+<hr/>
+
 > <i style="text-align:right;">Powered by [CrossUI](https://crossui.com)</i>
