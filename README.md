@@ -2,7 +2,7 @@
 
 [Online tool for editing code files in your GitHub Repositories](https://linb.github.io/GitHub_Code_Editor).
 
-You can use this online tool to log in your Github account, select repositorie, list code files, and edit any file in browser.
+You can use this online tool to log in your Github account, select repository, list code files, and edit any file in the browser.
 
 <hr>
 
